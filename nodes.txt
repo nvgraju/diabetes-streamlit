@@ -1,0 +1,17 @@
+@st.cache_resource is used to load and store expensive resources only once, instead of loading them repeatedly whenever Streamlit reruns the application.
+
+It is particularly useful in ML model deployment.
+
+model = pickle.load(open("diabetes_model.pkl", "rb"))
+
+Whenever Streamlit reruns the application, the script executes again.
+
+The model-loading statement may execute repeatedly.
+
+This can waste time and memory.
+
+@st.cache_resource is commonly used for ML models.
+
+@st.cache_data is commonly used for datasets and data-processing results.
+
+Both help improve application performance.
